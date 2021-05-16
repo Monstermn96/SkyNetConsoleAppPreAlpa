@@ -5,14 +5,30 @@ namespace ConsoleApp1
 {
     class Program
     {
-        int speed = 1; // This is the speed of typing for visuals ----higer the number = slower typing
 
-        static void Main(string[] args)
+
+
+
+        public static void SkyNetTyping(string skyMessage)
+        {
+            int speed = 1;
+
+            char[] skyMessageArray = skyMessage.ToCharArray();
+
+            for (int i = 0; i < skyMessageArray.Length; i++)
+            {
+                Console.Write(skyMessageArray[i]);
+                Thread.Sleep(speed);
+
+            }
+        }
+
+
+
+        public static void Main()
         {
 
-
-
-            int speed = 20; // This is the speed of typing for visuals ----higer the number = slower typing
+            int speed = 40; // This is the speed of typing for visuals ----higer the number = slower typing
 
             //greet the user
 
@@ -21,27 +37,12 @@ namespace ConsoleApp1
 
 
 
-
             // TRYING TO PRINT LETTER BY LETTER
 
 
-            string welcomeMessage = "Hello and welcome to SkyNet OS."; 
-
-            char[] welcomeArray = welcomeMessage.ToCharArray();
-
-            for (int i = 0;i < welcomeArray.Length ;i++)
-            {
-                Console.Write(welcomeArray[i]);
-                Thread.Sleep(speed);
-
-            }
-            Console.WriteLine();
-
-
-
-
-
-
+            string welcomeMessage = "Hello and welcome to SkyNet OS.";
+            SkyNetTyping(welcomeMessage);
+            Console.WriteLine("");
 
 
             Console.WriteLine("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█");
@@ -69,15 +70,8 @@ namespace ConsoleApp1
             //Console.WriteLine("This OS is just being born but is still very powerful.");
 
             string anotherMessage = "This OS is just being born but is still very powerful.";
+            SkyNetTyping(anotherMessage);
 
-            char[] anotherArray = anotherMessage.ToCharArray();
-
-            for (int i = 0; i < anotherMessage.Length; i++)
-            {
-                Console.Write(anotherArray[i]);
-                Thread.Sleep(speed);
-
-            }
             Console.WriteLine();
 
 
@@ -87,29 +81,22 @@ namespace ConsoleApp1
 
             string optionMenuList = "Please select an option below by typing the number next to your choice.";
 
-            char[] optionMenuListArray = optionMenuList.ToCharArray();
-
-            for (int i = 0; i < optionMenuListArray.Length; i++)
-            {
-                Console.Write(optionMenuListArray[i]);
-                Thread.Sleep(speed);
-
-            }
+            SkyNetTyping(optionMenuList);
 
             Thread.Sleep(100);
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("1) Number Game");
-
-
-
+            Console.WriteLine();
+            Console.WriteLine("2) Binary Converter");
+            Console.WriteLine();
+            Console.WriteLine("3) Grammar Game");
+            Console.WriteLine();
+            Console.WriteLine("4) MINI RPG");
 
 
             string userGameChoice = Console.ReadLine();
-
-
-
 
 
 
@@ -120,11 +107,17 @@ namespace ConsoleApp1
                 Console.Clear();
                 NumberGame();
             }
+            else if (userGameChoice == "2")
+            {
+                Console.Clear();
+                ComputerTalk();
 
-
-
-
-
+            }
+            else if (userGameChoice == "secret menu")
+            {
+                Console.Clear();
+                HiddenMenu();
+            }
 
 
 
@@ -144,30 +137,144 @@ namespace ConsoleApp1
         }
 
 
+        public static void HiddenMenu()
+        {
+
+            string titleTop = " ██████╗██╗      █████╗ ███████╗███████╗██╗███████╗██╗███████╗██████╗\n";
+            string titleTop1 = "██╔════╝██║     ██╔══██╗██╔════╝██╔════╝██║██╔════╝██║██╔════╝██╔══██╗\n";
+            string titleTop2 = "██║     ██║     ███████║███████╗███████╗██║█████╗  ██║█████╗  ██║  ██║\n";
+            string titleTop3 = "██║     ██║     ██╔══██║╚════██║╚════██║██║██╔══╝  ██║██╔══╝  ██║  ██║\n";
+            string titleTop4 = "╚██████╗███████╗██║  ██║███████║███████║██║██║     ██║███████╗██████╔╝\n";
+            string titleTop5 = " ╚═════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝     ╚═╝╚══════╝╚═════╝\n";
+            SkyNetTyping(titleTop);
+            SkyNetTyping(titleTop1);
+            SkyNetTyping(titleTop2);
+            SkyNetTyping(titleTop3);
+            SkyNetTyping(titleTop4);
+            SkyNetTyping(titleTop5);
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+        public static void ComputerTalk()
+        {
+
+            string numToConvertStr;
+            string result;
+            bool continueConverting = true;
+
+            while (continueConverting == true)
+            {
+
+
+                Console.Write("Input a Number : ");
+
+                numToConvertStr = Console.ReadLine(); // user enters number to convert to bionary
+
+                int numToConvert = Convert.ToInt32(numToConvertStr); //creates an int converting the number the user entered to int32
+
+                result = "";// result string
+
+                while (numToConvert > 1) // loop through and create the binary string
+
+                {
+                    int remainder = numToConvert % 2; //finding the remainder of the int to convert
+
+                    result = Convert.ToString(remainder) + result; //setting the string result to the new value ... then adding every value after to the front of the string
+
+                    numToConvert /= 2; // dividing the number to convert in half to restart sequence
+                }
+
+                result = Convert.ToString(numToConvert) + result;
+
+                Console.WriteLine(numToConvertStr + " In Binary is: {0}", result);
+
+                Console.WriteLine("");
+                Console.Write("Would you like to continue converting numbers? Y/N"); // asking user if they would like to convert another number
+                string continueBinary = Console.ReadLine();
+
+                if (continueBinary == "y" || continueBinary == "Y")
+                {
+                    Console.Clear();
+                    continueConverting = true;
+                }
+                else if (continueBinary == "n" || continueBinary == "N") 
+                {
+                    Console.Clear();
+                    continueConverting = false;
+                    Main();
+                }
+
+
+
+
+
+
+
+            }
+
+        }
+
+
+
+
+
         public static void NumberGame()
         {
 
-            int speed = 20; // This is the speed of typing for visuals ----higer the number = slower typing
+
 
             var randomInt = new Random();
             string gameMessage = "Let's play a guessing game, set the highest number.";
-            char[] gameMessageArray = gameMessage.ToCharArray();
+            SkyNetTyping(gameMessage);
 
-            for (int i = 0; i < gameMessageArray.Length; i++)
+
+
+
+
+            bool properGuess = false;
+            int upperValue = 0;
+            int numberToGuess = 0;
+
+
+
+            while (!properGuess)
             {
-                Console.Write(gameMessageArray[i]);
-                Thread.Sleep(speed);
+                try
+                {
+                    upperValue = int.Parse(Console.ReadLine());
+                    numberToGuess = randomInt.Next(0, upperValue);
+                    properGuess = true;
+                }
+                catch
+                {
+                    string badUperNumber = "That was not a real number please type a number.";
+                    SkyNetTyping(badUperNumber);
+                }
             }
 
 
+            // BEFORE TRY CATCH
 
 
-            int upperValue = int.Parse(Console.ReadLine());
-            int numberToGuess = randomInt.Next(0, upperValue);
-            Console.WriteLine($"Guess a number between 0 and {upperValue}");
+            //int upperValue = int.Parse(Console.ReadLine());
+            //int numberToGuess = randomInt.Next(0, upperValue);
+
+            //Console.WriteLine($"Guess a number between 0 and {upperValue}");
 
 
 
+            string guessingMessage = $"Guess a number between 0 and {upperValue}";
+            SkyNetTyping(guessingMessage);
 
 
 
@@ -177,66 +284,84 @@ namespace ConsoleApp1
 
             while (Continue == true)
             {
-                string userGuess = Console.ReadLine();
-                int guess = int.Parse(userGuess);
 
-                if (upperValue > 9000)
+                try
                 {
-                    Console.WriteLine(" IT'S OVER 9000");
-                }
 
+                    string userGuess = Console.ReadLine();
+                    int guess = int.Parse(userGuess);
 
-                if (guess < numberToGuess)
-                {
-                    Console.WriteLine("TOO LOW");
-                }
-                else if (guess > numberToGuess)
-                {
-                    Console.WriteLine("TOO HIGH");
-                }
-
-
-
-                if (userGuess == "q")
-                {
-                    break;
-                }
-                ;
-                if (guess == numberToGuess)
-                {
-                    Console.WriteLine("CORRECT!");
-
-
-
-
-                    Console.WriteLine("Would you like to play agin?");
-
-
-
-
-                    string userPlayAgain = Console.ReadLine();
-
-
-                    if (userPlayAgain == "Y" || userPlayAgain == "y")
+                    if (upperValue > 9000)
                     {
-                        Continue = true;
+                        string big = " IT'S OVER 9000";
+                        SkyNetTyping(big);
+                    }
+
+
+                    if (guess < numberToGuess)
+                    {
+                        Console.WriteLine("WRONG!");
+                        string low = "TOO LOW\n";
+                        SkyNetTyping(low);
+                    }
+                    else if (guess > numberToGuess)
+                    {
+                        Console.WriteLine("WRONG!");
+                        string high = "TOO HIGH ";
+                        SkyNetTyping(high);
+                    }
+
+
+                    if (userGuess == "q")
+                    {
+                        break;
+                    }
+                
+                    if (guess == numberToGuess)
+                    {
+                        Console.WriteLine("CORRECT!");
+
+
+                        string playAgain = "Would you like to play agin?";
+                        SkyNetTyping(playAgain);
+
+
+                        string userPlayAgain = Console.ReadLine();
+
+
+                        if (userPlayAgain == "Y" || userPlayAgain == "y")
+                        {
+                            Console.Clear();
+                            NumberGame();
+                            //Continue = true;
+                        }
+                        else
+                        {
+                            Continue = false;
+                            Console.Clear();
+                            Main();
+                        }
+
                     }
                     else
                     {
-                        Continue = false;
+                        
+                        Console.WriteLine("Guess again... or if you want to quit type 'q'");
+                        Continue = true;
                     }
 
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter a number. ");
 
                 }
-                else
-                {
-                    Console.WriteLine("WRONG!");
-                    Console.WriteLine("Guess again... or if you want to quit type 'q'");
-                    Continue = true;
-                }
+
             }
             Console.WriteLine("GAME OVER!");
+            Thread.Sleep(1000);
 
+            
 
 
 

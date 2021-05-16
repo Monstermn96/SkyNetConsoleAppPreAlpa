@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Student\\Desktop\\Sideprojects\\test\\ConsoleApp1\\ConsoleApp1\\SkyNetOS.csproj": {}
+    "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Student\\Desktop\\Sideprojects\\test\\ConsoleApp1\\ConsoleApp1\\SkyNetOS.csproj": {
+    "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Student\\Desktop\\Sideprojects\\test\\ConsoleApp1\\ConsoleApp1\\SkyNetOS.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
         "projectName": "SkyNetOS",
-        "projectPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\test\\ConsoleApp1\\ConsoleApp1\\SkyNetOS.csproj",
+        "projectPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
         "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\test\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
