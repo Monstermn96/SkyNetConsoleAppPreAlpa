@@ -366,7 +366,9 @@ namespace ConsoleApp1
 
         public static void MiniRPG()
         {
-            int speed = 1;
+            int userBeingDumb = 0;
+            int titleSpeed = 0; // instantly print the title
+            int typingSpeed = 50; // regular text speed
 
             string RPGTitle =  "   _____ _          _   _      _     _____  _____   _____ \n";
             string RPGTitle1 = "  / ____| |        | \\ | |    | |   |  __ \\|  __ \\ / ____|\n";
@@ -377,14 +379,32 @@ namespace ConsoleApp1
             string RPGTitle6 = "               __/ |    \n";
             string RPGTitle7 = "              |___/     \n";
 
-            SkyNetTyping(RPGTitle, speed);
-            SkyNetTyping(RPGTitle1, speed);
-            SkyNetTyping(RPGTitle2, speed);
-            SkyNetTyping(RPGTitle3, speed);             // calling typing method to type
-            SkyNetTyping(RPGTitle4, speed);
-            SkyNetTyping(RPGTitle5, speed);
-            SkyNetTyping(RPGTitle6, speed);
-            SkyNetTyping(RPGTitle7, speed);
+            SkyNetTyping(RPGTitle, titleSpeed);
+            SkyNetTyping(RPGTitle1, titleSpeed);
+            SkyNetTyping(RPGTitle2, titleSpeed);
+            SkyNetTyping(RPGTitle3, titleSpeed);             // calling typing method to type
+            SkyNetTyping(RPGTitle4, titleSpeed);
+            SkyNetTyping(RPGTitle5, titleSpeed);
+            SkyNetTyping(RPGTitle6, titleSpeed);
+            SkyNetTyping(RPGTitle7, titleSpeed);
+
+
+            string welcomeRPG = "\n\n\nHello and welcome to the SkyNet RPG this game is under development\nand probably a lot of game breaking bugs........ now to explain the game.......\n\n\nIts Judgment Day..... there are no rules use what ever it take to make it to the end\nthere is no saving so any progress made wil be lost for ever in the Net";
+            SkyNetTyping(welcomeRPG, typingSpeed);
+
+
+            Console.WriteLine("\nPlease Tell me your name and press ENTER to start: ");
+
+            string userName = Console.ReadLine();
+
+            if (userName == "")
+            {
+                Console.WriteLine("Please anter a name: ");
+
+            }
+
+
+
 
 
 

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ericb\\Desktop\\Side projects\\SkynetProject\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {}
+    "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ericb\\Desktop\\Side projects\\SkynetProject\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {
+    "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ericb\\Desktop\\Side projects\\SkynetProject\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
         "projectName": "SkyNetOS",
-        "projectPath": "C:\\Users\\ericb\\Desktop\\Side projects\\SkynetProject\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
-        "packagesPath": "C:\\Users\\ericb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ericb\\Desktop\\Side projects\\SkynetProject\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\SkyNetOS.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Student\\Desktop\\Sideprojects\\SkyNetConsoleApp\\SkyNetConsoleAppPreAlpa\\SkyNet\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ericb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
