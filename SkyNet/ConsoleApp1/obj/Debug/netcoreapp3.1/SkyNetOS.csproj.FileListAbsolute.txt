@@ -24,3 +24,16 @@ C:\Users\Student\Desktop\Sideprojects\SkyNetConsoleApp\SkyNetConsoleAppPreAlpa\S
 C:\Users\Student\Desktop\Sideprojects\SkyNetConsoleApp\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.dll
 C:\Users\Student\Desktop\Sideprojects\SkyNetConsoleApp\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.pdb
 C:\Users\Student\Desktop\Sideprojects\SkyNetConsoleApp\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.genruntimeconfig.cache
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.exe
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.deps.json
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.runtimeconfig.json
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.runtimeconfig.dev.json
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.dll
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\bin\Debug\netcoreapp3.1\SkyNetOS.pdb
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.csprojAssemblyReference.cache
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.AssemblyInfoInputs.cache
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.AssemblyInfo.cs
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.csproj.CoreCompileInputs.cache
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.dll
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.pdb
+C:\Users\ericb\Desktop\Side projects\SkynetProject\SkyNetConsoleAppPreAlpa\SkyNet\ConsoleApp1\obj\Debug\netcoreapp3.1\SkyNetOS.genruntimeconfig.cache
