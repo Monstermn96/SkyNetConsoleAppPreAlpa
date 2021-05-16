@@ -9,9 +9,9 @@ namespace ConsoleApp1
 
 
 
-        public static void SkyNetTyping(string skyMessage)
+        public static void SkyNetTyping(string skyMessage, int speed)
         {
-            int speed = 5;
+            //int speed = 5;
 
             char[] skyMessageArray = skyMessage.ToCharArray();
 
@@ -28,7 +28,7 @@ namespace ConsoleApp1
         public static void Main()
         {
 
-            int speed = 40; // This is the speed of typing for visuals ----higer the number = slower typing
+            int speed = 5; // This is the speed of typing for visuals ----higer the number = slower typing
 
             //greet the user
 
@@ -41,7 +41,7 @@ namespace ConsoleApp1
 
 
             string welcomeMessage = "Hello and welcome to SkyNet OS.";
-            SkyNetTyping(welcomeMessage);
+            SkyNetTyping(welcomeMessage, speed);
             Console.WriteLine("");
 
 
@@ -67,8 +67,8 @@ namespace ConsoleApp1
 
             //Console.WriteLine("This OS is just being born but is still very powerful.");
 
-            string anotherMessage = "This OS is just being born but is still \\\\ \\ \\very powerful.";
-            SkyNetTyping(anotherMessage);
+            string anotherMessage = "This OS is just being born but is still very powerful.";
+            SkyNetTyping(anotherMessage, speed);
 
             Console.WriteLine();
 
@@ -77,9 +77,15 @@ namespace ConsoleApp1
             Thread.Sleep(100);
 
 
+
+
+
+
+            // ########################################################    OPTION MENU   ###########################################################
+
             string optionMenuList = "Please select an option below by typing the number next to your choice.";
 
-            SkyNetTyping(optionMenuList);
+            SkyNetTyping(optionMenuList, speed);
 
             Thread.Sleep(100);
             Console.WriteLine("");
@@ -87,31 +93,30 @@ namespace ConsoleApp1
             Console.WriteLine("");
             //Console.WriteLine("1) Number Game");
             string optionOne = "1) Number Game";
-            SkyNetTyping(optionOne);
+            SkyNetTyping(optionOne, speed);
 
 
             Console.WriteLine();
             //Console.WriteLine("2) Binary Converter");
             string optionTwo = "2) Binary Converter";
-            SkyNetTyping(optionTwo);
+            SkyNetTyping(optionTwo, speed);
 
             Console.WriteLine();
             //Console.WriteLine("3) Grammar Game");
             string optionThree = "3) Grammar Game";
-            SkyNetTyping(optionThree);
+            SkyNetTyping(optionThree, speed);
 
 
             Console.WriteLine();
             //Console.WriteLine("4) MINI RPG");
             string optionFour = "4) MINI RPG\n";
-            SkyNetTyping(optionFour);
+            SkyNetTyping(optionFour, speed);
 
 
             string userChoice = "Select: ";
-            SkyNetTyping(userChoice);
+            SkyNetTyping(userChoice, speed);
 
             string userGameChoice = Console.ReadLine();
-
 
 
 
@@ -139,21 +144,9 @@ namespace ConsoleApp1
                 HiddenMenu();
             }
 
+            // ######################################################    OPTION MENU   ############################################################
 
-
-            //string userGuess = Console.ReadLine();
-            //int guess = int.Parse(userGuess);
-
-
-
-            /*
-            if (upperValue > 9000)
-            {
-                Console.WriteLine(" IT'S OVER 9000");
-            }
-
-            */
-
+            
         }
 
 
@@ -162,10 +155,12 @@ namespace ConsoleApp1
                 {
 
 
+                    int speed = 5;
+
 
                     var randomInt = new Random();
                     string gameMessage = "Let's play a guessing game, set the highest number.";
-                    SkyNetTyping(gameMessage);
+                    SkyNetTyping(gameMessage, speed);
 
 
 
@@ -184,11 +179,18 @@ namespace ConsoleApp1
                             upperValue = int.Parse(Console.ReadLine());
                             numberToGuess = randomInt.Next(0, upperValue);
                             properGuess = true;
-                        }
+
+                            if (upperValue > 9000)
+                            {
+                                string big = " IT'S OVER 9000!!!!!\n\n";
+                                SkyNetTyping(big, speed);
+                            }
+
+                }
                         catch
                         {
                             string badUperNumber = "That was not a real number please type a number.";
-                            SkyNetTyping(badUperNumber);
+                            SkyNetTyping(badUperNumber, speed);
                         }
                     }
 
@@ -203,8 +205,8 @@ namespace ConsoleApp1
 
 
 
-                    string guessingMessage = $"Guess a number between 0 and {upperValue}";
-                    SkyNetTyping(guessingMessage);
+                    string guessingMessage = $"Guess a number between 0 and {upperValue}: ";
+                    SkyNetTyping(guessingMessage, speed);
 
 
 
@@ -218,25 +220,25 @@ namespace ConsoleApp1
 
                             string userGuess = Console.ReadLine();
                             int guess = int.Parse(userGuess);
-
+                            /*
                             if (upperValue > 9000)
                             {
-                                string big = " IT'S OVER 9000";
-                                SkyNetTyping(big);
+                                string big = " IT'S OVER 9000!!!!!!!";
+                                SkyNetTyping(big, speed);
                             }
-
+                            */
 
                             if (guess < numberToGuess)
                             {
                                 Console.WriteLine("WRONG!");
                                 string low = "TOO LOW\n";
-                                SkyNetTyping(low);
+                                SkyNetTyping(low, speed);
                             }
                             else if (guess > numberToGuess)
                             {
                                 Console.WriteLine("WRONG!");
                                 string high = "TOO HIGH ";
-                                SkyNetTyping(high);
+                                SkyNetTyping(high, speed);
                             }
 
 
@@ -250,8 +252,8 @@ namespace ConsoleApp1
                                 Console.WriteLine("CORRECT!");
 
 
-                                string playAgain = "Would you like to play agin?";
-                                SkyNetTyping(playAgain);
+                                string playAgain = "Would you like to play agin? (Y/N)";
+                                SkyNetTyping(playAgain, speed);
 
 
                                 string userPlayAgain = Console.ReadLine();
@@ -281,12 +283,12 @@ namespace ConsoleApp1
                         }
                         catch
                         {
-                            Console.WriteLine("Please enter a number. ");
+                            Console.WriteLine("Please enter a real number. ");
 
                         }
 
-                    Console.WriteLine("GAME OVER!");
-                    Thread.Sleep(1000);
+                    //Console.WriteLine("GAME OVER!");
+                    //Thread.Sleep(1000);
 
                     }
             
@@ -364,24 +366,25 @@ namespace ConsoleApp1
 
         public static void MiniRPG()
         {
+            int speed = 1;
 
             string RPGTitle =  "   _____ _          _   _      _     _____  _____   _____ \n";
             string RPGTitle1 = "  / ____| |        | \\ | |    | |   |  __ \\|  __ \\ / ____|\n";
             string RPGTitle2 = " | (___ | | ___   _|  \\| | ___| |_  | |__) | |__) | |  __ \n";
-            string RPGTitle3 = "  \\___ \\| |/ / | | | . ` |/ _ \\ __| |  _  /|  ___/| | |_ |\n";
+            string RPGTitle3 = "  \\___ \\| |/ / | | | . ` |/ _ \\ __| |  _  /|  ___/| | |_ |\n";               //Title 
             string RPGTitle4 = "  ____) |   <| |_| | |\\  |  __/ |_  | | \\ \\| |    | |__| | \n";
             string RPGTitle5 = " |_____/|_|\\_\\\\__, |_| \\_|\\___|\\__| |_|  \\_\\_|     \\_____|\n";
             string RPGTitle6 = "               __/ |    \n";
             string RPGTitle7 = "              |___/     \n";
 
-            SkyNetTyping(RPGTitle);
-            SkyNetTyping(RPGTitle1);
-            SkyNetTyping(RPGTitle2);
-            SkyNetTyping(RPGTitle3);
-            SkyNetTyping(RPGTitle4);
-            SkyNetTyping(RPGTitle5);
-            SkyNetTyping(RPGTitle6);
-            SkyNetTyping(RPGTitle7);
+            SkyNetTyping(RPGTitle, speed);
+            SkyNetTyping(RPGTitle1, speed);
+            SkyNetTyping(RPGTitle2, speed);
+            SkyNetTyping(RPGTitle3, speed);             // calling typing method to type
+            SkyNetTyping(RPGTitle4, speed);
+            SkyNetTyping(RPGTitle5, speed);
+            SkyNetTyping(RPGTitle6, speed);
+            SkyNetTyping(RPGTitle7, speed);
 
 
 
@@ -399,6 +402,7 @@ namespace ConsoleApp1
 
         public static void HiddenMenu()
         {
+            int speed = 1;
 
             string titleTop = " ██████╗██╗      █████╗ ███████╗███████╗██╗███████╗██╗███████╗██████╗\n";
             string titleTop1 = "██╔════╝██║     ██╔══██╗██╔════╝██╔════╝██║██╔════╝██║██╔════╝██╔══██╗\n";
@@ -406,12 +410,12 @@ namespace ConsoleApp1
             string titleTop3 = "██║     ██║     ██╔══██║╚════██║╚════██║██║██╔══╝  ██║██╔══╝  ██║  ██║\n";
             string titleTop4 = "╚██████╗███████╗██║  ██║███████║███████║██║██║     ██║███████╗██████╔╝\n";
             string titleTop5 = " ╚═════╝╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝     ╚═╝╚══════╝╚═════╝\n";
-            SkyNetTyping(titleTop);
-            SkyNetTyping(titleTop1);
-            SkyNetTyping(titleTop2);
-            SkyNetTyping(titleTop3);
-            SkyNetTyping(titleTop4);
-            SkyNetTyping(titleTop5);
+            SkyNetTyping(titleTop, speed);
+            SkyNetTyping(titleTop1, speed);
+            SkyNetTyping(titleTop2, speed);
+            SkyNetTyping(titleTop3, speed);
+            SkyNetTyping(titleTop4, speed);
+            SkyNetTyping(titleTop5, speed);
 
 
 
