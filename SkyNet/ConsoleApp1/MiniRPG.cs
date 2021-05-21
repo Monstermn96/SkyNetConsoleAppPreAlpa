@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Threading;
 namespace SkyNetOS
 {
     class MiniRPG
     {
+        static List<Player> PlayerID = new List<Player>();
 
 
         public static void SkyNetRPG()
         {
-            int userBeingDumb = 0;
+            //int userBeingDumb = 0;
             int titleSpeed = 0; // instantly print the title
-            int typingSpeed = 50; // regular text speed
+            int typingSpeed = 15; // regular text speed
 
             string RPGTitle = "   _____ _          _   _      _     _____  _____   _____ \n";
-            string RPGTitle1 = "  / ____| |        | \\ | |    | |   |  __ \\|  __ \\ / ____|\n";
+           string RPGTitle1 = "  / ____| |        | \\ | |    | |   |  __ \\|  __ \\ / ____|\n";
             string RPGTitle2 = " | (___ | | ___   _|  \\| | ___| |_  | |__) | |__) | |  __ \n";
             string RPGTitle3 = "  \\___ \\| |/ / | | | . ` |/ _ \\ __| |  _  /|  ___/| | |_ |\n";               //Title 
             string RPGTitle4 = "  ____) |   <| |_| | |\\  |  __/ |_  | | \\ \\| |    | |__| | \n";
@@ -33,19 +34,88 @@ namespace SkyNetOS
             OSMain.SkyNetTyping(RPGTitle7, titleSpeed);
 
 
-            string welcomeRPG = "\n\n\nHello and welcome to the SkyNet RPG this game is under development\nand probably a lot of game breaking bugs........ now to explain the game.......\n\n\nIts Judgment Day..... there are no rules use what ever it take to make it to the end\nthere is no saving so any progress made wil be lost for ever in the Net";
+            string welcomeRPG = "\n\n\nHello and welcome to the SkyNet RPG this game is under development\nand probably a lot of game breaking bugs... now to explain the game...\n\n\nIt's Judgment Day... there are no rules. Use what ever it takes to make it to the end.\nThere is no saving, so any progress made wil be lost forever to SkyNet";
             OSMain.SkyNetTyping(welcomeRPG, typingSpeed);
 
 
-            Console.WriteLine("\nPlease Tell me your name and press ENTER to start: ");
+            Console.WriteLine("\n\nPlease verify name and press ENTER to start: ");
 
-            string userName = Console.ReadLine();
+            string characterName = Console.ReadLine();
 
-            if (userName == "")
+
+           
+            string ageVerify = $"\n{characterName} please verify age: ";
+            OSMain.SkyNetTyping(ageVerify, typingSpeed);
+
+            string stringAge = Console.ReadLine();
+            int userAge = int.Parse(stringAge);
+
+
+
+
+            string createUserCatchphrase = $"\n{characterName} tell me your catchphrase: ";
+            OSMain.SkyNetTyping(createUserCatchphrase, typingSpeed);
+            string characterPhrase = Console.ReadLine();
+
+
+
+            
+
+
+            Player user = new Player(characterName, userAge, characterPhrase);
+
+            PlayerID.Add(user);
+
+
+
+            string verifyRiddle = "\nWhat are you feeling, if you are \":(\"? ";
+            OSMain.SkyNetTyping(verifyRiddle, typingSpeed);
+            string riddle = Console.ReadLine().ToLower();
+
+            if (riddle == "sad")
             {
-                Console.WriteLine("Please anter a name: ");
-
+                Console.Clear();
+                StoryStart();
             }
+
+            else
+            {
+                string verifyRiddleFail = "\nYOU HAVE FAILED VERIFICATION PLEASE WAIT WHILE THE SYSTEM REBOOTS... ";
+                OSMain.SkyNetTyping(verifyRiddleFail, typingSpeed);
+
+                Thread.Sleep(1000);
+
+                Console.Clear();
+                SkyNetRPG();
+            }
+
+
+
+
+        }
+
+        public static void StoryStart()
+        {
+            int typingSpeed = 15;
+
+            
+            string storyStart = $"Welcome ";// trying to get player obj to display info in string
+            OSMain.SkyNetTyping(storyStart, typingSpeed);
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
 

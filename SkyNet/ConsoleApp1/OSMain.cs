@@ -103,51 +103,57 @@ namespace SkyNetOS
             string userGameChoice = Console.ReadLine();
             try
             {
-                if (userGameChoice == "1")
-                {
-                    Console.Clear();
-                    NumberGame.NumberGameGame();
-                }
-                else if (userGameChoice == "2")
-                {
-                    Console.Clear();
-                    BinaryConversion.ComputerTalk();
+                bool userIsThinking = true;
 
-                }
-                else if (userGameChoice == "4")
+                while (userIsThinking == true)
                 {
-                    Console.Clear();
-                    MiniRPG.SkyNetRPG();
+                    if (userGameChoice == "1")
+                    {
+                        Console.Clear();
+                        NumberGame.NumberGameGame();
+                        userIsThinking = false;
+                    }
+                    else if (userGameChoice == "2")
+                    {
+                        Console.Clear();
+                        BinaryConversion.ComputerTalk();
+                        userIsThinking = false;
 
+                    }
+                    else if (userGameChoice == "4")
+                    {
+                        Console.Clear();
+                        MiniRPG.SkyNetRPG();
+                        userIsThinking = false;
+
+                    }
+                    else if (userGameChoice == "secret menu")
+                    {
+                        Console.Clear();
+                        HiddenMenu();
+                        userIsThinking = false;
+                    }
+                    else
+                    {
+                        string optionCatch = "That is not a Menu item please choose one of the 4 items...";
+                        SkyNetTyping(optionCatch, speed);
+
+                        if (userBeingDumb > 4)
+                        {
+                            string userNotListining = "Now you get to wait while I reboot....good job.";
+                            SkyNetTyping(userNotListining, 100);
+                            Console.Clear();
+                            Main();
+                        }
+                        userBeingDumb++;
+                    }
                 }
-                else if (userGameChoice == "secret menu")
-                {
-                    Console.Clear();
-                    HiddenMenu();
-                }
+
+
             }
             catch
             {
-                string optionCatch = "That is not a Menu item please choose one of the 4 items...";
-                SkyNetTyping(optionCatch, speed);
-
-
-
-
-                if (userBeingDumb > 4)
-                {
-                    string userNotListining = "Now you get to wait while I reboot....good job.";
-                    SkyNetTyping(userNotListining, 100);
-                    Console.Clear();
-                    Main();
-                }
-
-
-
-
-
-
-                userBeingDumb++;
+                
             }
 
 
