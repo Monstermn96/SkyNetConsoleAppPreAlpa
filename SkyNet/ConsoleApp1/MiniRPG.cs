@@ -51,15 +51,9 @@ namespace SkyNetOS
             int userAge = int.Parse(stringAge);
 
 
-
-
             string createUserCatchphrase = $"\n{characterName} tell me your catchphrase: ";
             OSMain.SkyNetTyping(createUserCatchphrase, typingSpeed);
             string characterPhrase = Console.ReadLine();
-
-
-
-            
 
 
             Player user = new Player(characterName, userAge, characterPhrase);
@@ -96,14 +90,18 @@ namespace SkyNetOS
 
         public static void StoryStart()
         {
-            int typingSpeed = 15;
+            int typingSpeed = 28;
 
             
-            string storyStart = $"Welcome ";// trying to get player obj to display info in string
+            string storyStart = $"Welcome {PlayerID[0].PlayerName}, I understand you really like to say {PlayerID[0].PlayerCatchPhrase}";// trying to get player obj to display info in string
             OSMain.SkyNetTyping(storyStart, typingSpeed);
 
 
-            
+            string startreply = $"\n... But I will ask you to please refrain from saying it because it really doesnt make sense\nand it causes me to run into system errors.";
+            OSMain.SkyNetTyping(startreply, 45);
+
+
+
 
 
 

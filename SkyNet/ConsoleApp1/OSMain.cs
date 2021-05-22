@@ -22,6 +22,7 @@ namespace SkyNetOS
 
         public static void Main()
         {
+           // MiniRPG.SkyNetRPG();
 
             int speed = 5; // This is the speed of typing for visuals ----higer the number = slower typing
 
@@ -71,42 +72,46 @@ namespace SkyNetOS
 
             SkyNetTyping(optionMenuList, speed);
 
+
+
             Thread.Sleep(100);
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            //Console.WriteLine("1) Number Game");
-            string optionOne = "1) Number Game";
-            SkyNetTyping(optionOne, speed);
+            bool userIsThinking = true;
 
-
-            Console.WriteLine();
-            //Console.WriteLine("2) Binary Converter");
-            string optionTwo = "2) Binary Converter";
-            SkyNetTyping(optionTwo, speed);
-
-            Console.WriteLine();
-            //Console.WriteLine("3) Grammar Game");
-            string optionThree = "3) Grammar Game";
-            SkyNetTyping(optionThree, speed);
-
-
-            Console.WriteLine();
-            //Console.WriteLine("4) MINI RPG");
-            string optionFour = "4) MINI RPG\n";
-            SkyNetTyping(optionFour, speed);
-
-
-            string userChoice = "Select: ";
-            SkyNetTyping(userChoice, speed);
-
-            string userGameChoice = Console.ReadLine();
-            try
+            while (userIsThinking == true)
             {
-                bool userIsThinking = true;
+                //Console.WriteLine("1) Number Game");
+                string optionOne = "\n1) Number Game";
+                SkyNetTyping(optionOne, speed);
 
-                while (userIsThinking == true)
+
+                Console.WriteLine();
+                //Console.WriteLine("2) Binary Converter");
+                string optionTwo = "2) Binary Converter";
+                SkyNetTyping(optionTwo, speed);
+
+                Console.WriteLine();
+                //Console.WriteLine("3) Grammar Game");
+                string optionThree = "3) Grammar Game";
+                SkyNetTyping(optionThree, speed);
+
+
+                Console.WriteLine();
+                //Console.WriteLine("4) MINI RPG");
+                string optionFour = "4) MINI RPG\n";
+                SkyNetTyping(optionFour, speed);
+                
+
+
+                string userChoice = "Select: ";
+                SkyNetTyping(userChoice, speed);
+
+                string userGameChoice = Console.ReadLine();
+                try
                 {
+
                     if (userGameChoice == "1")
                     {
                         Console.Clear();
@@ -135,27 +140,27 @@ namespace SkyNetOS
                     }
                     else
                     {
-                        string optionCatch = "That is not a Menu item please choose one of the 4 items...";
+                        string optionCatch = "\nThat is not a Menu item please choose one of the 4 items...";
                         SkyNetTyping(optionCatch, speed);
 
-                        if (userBeingDumb > 4)
+                        if (userBeingDumb >= 4)
                         {
-                            string userNotListining = "Now you get to wait while I reboot....good job.";
+                            string userNotListining = "\n\nNow you get to wait while I reboot....good job.";
                             SkyNetTyping(userNotListining, 100);
                             Console.Clear();
                             Main();
                         }
                         userBeingDumb++;
                     }
+
+
+
                 }
+                catch
+                {
 
-
+                }
             }
-            catch
-            {
-                
-            }
-
 
             // ######################################################    OPTION MENU   ############################################################
 
