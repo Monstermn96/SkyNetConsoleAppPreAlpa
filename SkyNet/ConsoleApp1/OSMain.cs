@@ -22,8 +22,14 @@ namespace SkyNetOS
 
         public static void Main()
         {
-           // MiniRPG.SkyNetRPG();
 
+            
+            
+            
+            
+            //Console.ForegroundColor = ConsoleColor.DarkGreen;
+            // MiniRPG.SkyNetRPG();
+            MiniRPG.SkyNetRPG();
             int speed = 5; // This is the speed of typing for visuals ----higer the number = slower typing
 
             //greet the user
