@@ -68,15 +68,15 @@ namespace SkyNetOS
 
 
             bool Continue = true;
-
+            
             while (Continue == true)
             {
-
+                string userGuess = Console.ReadLine();
                 try
                 {
-
-                    string userGuess = Console.ReadLine();
                     int guess = int.Parse(userGuess);
+                    
+                    
                     /*
                     if (upperValue > 9000)
                     {
@@ -99,10 +99,7 @@ namespace SkyNetOS
                     }
 
 
-                    if (userGuess == "q")
-                    {
-                        break;
-                    }
+
 
                     if (guess == numberToGuess)
                     {
@@ -140,6 +137,12 @@ namespace SkyNetOS
                 }
                 catch
                 {
+                    if (userGuess == "q")
+                    {
+                        Continue = false;
+                        break;
+                    }
+
                     Console.WriteLine("Please enter a real number. ");
 
                 }
@@ -152,8 +155,8 @@ namespace SkyNetOS
 
 
 
-
-
+            Console.Clear();
+            OSMain.Main();
 
 
 
