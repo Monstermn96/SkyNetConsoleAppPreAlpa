@@ -100,18 +100,57 @@ namespace SkyNetOS
             string startreply = $"\n... But I will ask you to please refrain from saying it because it really doesnt make sense\nand it causes me to run into system errors.";
             OSMain.SkyNetTyping(startreply, 45);
 
+            Console.WriteLine("\n Pess \"ENTER\" to cause system overload...");
+            Console.ReadLine();
+
+            Console.Clear();
+
+            string enteringTheNet = "now entering skynet..";
+            OSMain.SkyNetTyping(enteringTheNet, 40);
+
+            string hackingTheNet = $"\n\n****BRUTEFORCE HACK DETECTED BY USER: {PlayerID[0].PlayerName} DEPLOYING COUNETMEASUERS****";
+            OSMain.SkyNetTyping(hackingTheNet, 60);
+            Thread.Sleep(400);
+
+            string hackingTheNet1 = $"\n\n{PlayerID[0].PlayerName}: {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   \n{PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   \n{PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}   {PlayerID[0].PlayerCatchPhrase}";
+            OSMain.SkyNetTyping(hackingTheNet1, 5);
+
+
+            Thread.Sleep(400);
+            for (int i = 0; i < 8; i++)
+            {
+                Console.WriteLine("001011011001010101010100101001001010101011100001010101001010101001");
+                Thread.Sleep(1);
+                Console.WriteLine("101010101010001001010100101001010100100010000100001000010000010011");
+                Thread.Sleep(1);
+                Console.WriteLine("000101001010101010101001010100101010100111010010010010101101101010");
+                Thread.Sleep(1);
+            }
+            Thread.Sleep(800);
+            Console.Clear();
+
+            
 
 
 
 
 
 
+            // player has entered skynet decisions start here
+
+            string startingPoint = "Anonymous: You have made passed SkyNet's firewall your goal now, is to shut down SkyNet...";
+            OSMain.SkyNetTyping(startingPoint, typingSpeed);
+
+            string startingPoint1 = "\n\nAnonymous: You will be asked many questions on your journy just be careful because\nthey are security questions being asked by SkyNet's center of security,\nand will prevent you from getting to where you need to be.\n\n PRESS ENTER TO CONTINUE...";
+            OSMain.SkyNetTyping(startingPoint1, typingSpeed);
+
+
+            Console.ReadLine();
 
 
 
-
-
-
+            string startingPoint2 = "\nAnonymous: saying more things as a test";
+            OSMain.SkyNetTyping(startingPoint2, typingSpeed);
 
 
 
