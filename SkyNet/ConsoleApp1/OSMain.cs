@@ -22,19 +22,8 @@ namespace SkyNetOS
 
         public static void Main()
         {
-
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-
-            // MiniRPG.SkyNetRPG();
-
-
-            
-            
-            
-            
-            //Console.ForegroundColor = ConsoleColor.DarkGreen;
-            // MiniRPG.SkyNetRPG();
            // MiniRPG.SkyNetRPG();
+
             int speed = 5; // This is the speed of typing for visuals ----higer the number = slower typing
 
             //greet the user
@@ -113,13 +102,7 @@ namespace SkyNetOS
                 //Console.WriteLine("4) MINI RPG");
                 string optionFour = "4) MINI RPG\n";
                 SkyNetTyping(optionFour, speed);
-
                 
-                //Console.WriteLine("4) MINI RPG");
-                string optionFive = "5) Vending machine\n";
-                SkyNetTyping(optionFive, speed);
-
-
 
 
                 string userChoice = "Select: ";
@@ -149,15 +132,6 @@ namespace SkyNetOS
                         userIsThinking = false;
 
                     }
-                    else if (userGameChoice == "5")
-                    {
-                        Console.Clear();
-
-                        userIsThinking = false;
-                    }
-
-
-
                     else if (userGameChoice == "secret menu")
                     {
                         Console.Clear();
