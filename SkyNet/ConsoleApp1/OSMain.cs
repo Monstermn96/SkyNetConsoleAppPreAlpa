@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Threading;
 
+
 namespace SkyNetOS
 {
     public class OSMain
     {
+        public static bool VendRHasStarted = false;
+
+
         public static void SkyNetTyping(string skyMessage, int speed)
         {
             //int speed = 5;
@@ -22,7 +26,8 @@ namespace SkyNetOS
 
         public static void Main()
         {
-           // MiniRPG.SkyNetRPG();
+            // MiniRPG.SkyNetRPG();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
 
             int speed = 5; // This is the speed of typing for visuals ----higer the number = slower typing
 
@@ -102,7 +107,10 @@ namespace SkyNetOS
                 //Console.WriteLine("4) MINI RPG");
                 string optionFour = "4) MINI RPG\n";
                 SkyNetTyping(optionFour, speed);
-                
+
+                string optionFive = "5) Vending Machine\n";
+                SkyNetTyping(optionFive, speed);
+
 
 
                 string userChoice = "Select: ";
@@ -132,6 +140,21 @@ namespace SkyNetOS
                         userIsThinking = false;
 
                     }
+                    else if (userGameChoice == "5")
+                    {
+                        Console.Clear();
+
+                        if (!VendRHasStarted)
+                        {
+                            VendingMachine.VenderStart();
+                            userIsThinking = false;
+                        }
+                        else
+                        {
+                            VendingMachine.MainMenu();
+                            userIsThinking = false;
+                        }
+                    }
                     else if (userGameChoice == "secret menu")
                     {
                         Console.Clear();
@@ -143,7 +166,7 @@ namespace SkyNetOS
                         string optionCatch = "\nThat is not a Menu item please choose one of the 4 items...";
                         SkyNetTyping(optionCatch, speed);
 
-                        if (userBeingDumb >= 4)
+                        if (userBeingDumb >= 2)
                         {
                             string userNotListining = "\n\nNow you get to wait while I reboot....good job.";
                             SkyNetTyping(userNotListining, 100);
